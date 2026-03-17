@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string Mygroup ;
+    cout << "input file name: ";
+    cin >> Mygroup;
+    ofstream MyWriteFile(Mygroup);
+
+    string MyFriend;
+    cout << "input your friend's name: ";
+    cin >> MyFriend;
+    MyWriteFile << MyFriend << endl;
+
+
+    MyWriteFile.close();
+    string myText;
+    ifstream MyReadFile(Mygroup);
+    while (getline(MyReadFile, myText))
+    {
+        cout << myText;
+    }
+    return 0;
+}

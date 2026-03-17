@@ -1,0 +1,14 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream myFile("filename2.txt");
+
+    myFile << "684244117 นายชนาธิป ไทยแท้ Mr.chanathip thaithae" << endl;
+
+    myFile.close();
+
+    return 0;
+}
